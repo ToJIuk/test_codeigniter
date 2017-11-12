@@ -1,0 +1,43 @@
+.crud_edit_btn .fa.fa-pencil {
+    color: #ccc;
+    display: none;
+}
+
+.ui-widget.ui-widget-content {
+    border: 1px solid #bbb;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.37);
+}
+.ui-dialog-titlebar {
+    background-color: rgba(54, 65, 85, 1) !important;
+    border-top: 0 !important;
+    color: white;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.ui-dialog-titlebar .ui-dialog-title {
+    color: white;
+}
+
+.ui-dialog-titlebar .ui-icon {
+    background-image: url(/files/admin/js/jquery-ui-1.12.1/images/ui-icons_ffffff_256x240.png);
+}
+.ui-dialog-titlebar .ui-icon.ui-state-hover {
+    background-color: transparent;
+}
+
+.top_header .top_logo  {
+    font-size: 24px;
+    margin-top: 6px;
+}
+
+#menu li.hover {
+    transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+    background-color:rgba(14, 143, 159, 1);
+}
+
+.ui-slider.ui-widget.ui-widget-content {border: 1px solid #bbb !important;}
+
+.ui-slider-handle.ui-corner-all.ui-state-default {
+     border: 1px solid #bbb !important;
+ }

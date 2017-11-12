@@ -1,0 +1,761 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>TKN</title>
+		
+		<!-- Google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+		
+		<!-- Font awesone -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		
+		<!-- bootstrap css -->
+        <link rel='stylesheet' href="js/bootstrap-3.3.7/css/bootstrap.css" />
+		
+		<!-- bootstrap select -->
+        <link rel='stylesheet' href="js/bootstrap-select-1.12.2/bootstrap-select.css" />
+		
+		<!-- jquery ui css -->
+        <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.css">
+		
+        <!-- Theme css -->
+        <link rel='stylesheet' type='text/css'  href="style.css" />
+    </head>
+    <body>
+		<div class="page-container sidebar-collapsed">
+			<div class="content">
+				<header class="top_header">
+					<h3 class="page_name">Пользователи</h3>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 left_side">
+								<h1 class="top_logo">ТКН-CRM</h1>
+								<div class="form-group top_search_holder">
+									<input type="text" class="form-control top_search" placeholder="Поиск">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</div>
+							</div>
+							<div class="col-md-6 right_side">
+								<ul class="top_nav">
+									<li><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Осипов Андрей</a><span class="nav_divider">|</span></li>
+									<li><a href="#">Выход</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown mob_dropdown_box">
+						<button class="mob_dropdown_btn" id="mobDrop" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="mobDrop">
+							<li class="mob_filrer_btn"><a>Фильтр</a></li>
+							<li class=""><a>Добавить запись</a></li>
+							<li role="separator" class="divider"></li>
+							<li class=""><a href="#">Настройки</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="logout_link"><a href="#">Logout</a></li>
+						</ul>
+					</div>
+				</header>
+				<div class="subheading">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4 left_side">
+								<div class="left_side_holder">
+									<button type="button" class="filters_button"><i class="fa fa-filter" aria-hidden="true"></i></button>
+									<div class="status_box">
+										<span class="light_grey">Тип:</span>
+										<span>Сторудник</span>
+										<i class="fa fa-circle" aria-hidden="true"></i>
+									</div>
+									<div class="status_box">
+										<span class="light_grey">Статус: </span>
+										<span>Деактивирован</span>
+										<i class="fa fa-circle" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-8 right_side">
+								<div class="buttons_holder">
+									<button type="button" class="btn btn-info">ПРИМЕНИТЬ</button>
+									<button type="button" class="btn btn-primary">СБРОСИТЬ</button>
+									<button type="button" class="btn btn-warning">ИЗМЕНИТЬ</button>
+									<button type="button" class="btn btn-danger">УДАЛИТЬ</button>
+									<button type="button" class="btn btn-success">ДОБАВИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="advanced_filters">
+					<div class="cloce_btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+					<div class="corner"></div>
+					<div class="container">
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Main</a></li>
+							<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Advanced</a></li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="home">
+								<form>
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>CFO</label>
+												<select class="form-control selectpicker" title="-">
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label>Shop</label>
+												<select class="form-control selectpicker" title="-">
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label>Data view</label>
+												<select class="form-control selectpicker" title="-">
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label>Chart type</label>
+												<select class="form-control selectpicker" title="-">
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group date_group">
+												<label>Date from</label>
+												<input type="text" class="form-control has_datepicker" value="27 feb 2017">
+												<div class="date_icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+											</div>
+											<div class="form-group date_group">
+												<label>Date to</label>
+												<input type="text" id="datepicker" class="form-control has_datepicker" value="27 feb 2017">
+												<div class="date_icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+											</div>
+											<div class="form-group">
+												<label>Chart type</label>
+												<select class="form-control selectpicker" title="-">
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Size</label>
+												<select class="form-control selectpicker" title="-">
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label>Line</label>
+												<select class="form-control selectpicker" title="-">
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label>Orders Property</label>
+												<select class="form-control selectpicker" title="-">
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label>OP Property</label>
+												<select class="form-control selectpicker" title="-">
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Status</label>
+												<select class="form-control selectpicker" title="-">
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label>Order number</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<label>Product ID</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="profile">
+								<div class="row">
+									<div class="col-md-3">
+										tab2
+									</div>
+									<div class="col-md-3">
+										tab2
+									</div>
+									<div class="col-md-3">
+										tab2
+									</div>
+									<div class="col-md-3">
+										tab2
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_buttons">
+							<button type="button" class="btn btn-info">ПРИМЕНИТЬ</button>
+							<button type="button" class="btn btn-primary">СБРОСИТЬ</button>
+						</div>
+					</div>
+				</div>
+				<div class="table_section">
+					<div class="container">
+						<table class="table table-responsive table-bordered">
+							<thead>
+								<tr>
+									<th class="first_col">
+										<input id="box0" type="checkbox" class="with-font">
+										<label for="box0"></label>
+									</th>
+									<th>
+										ID
+										<div class="sort_box">
+											<a href="#">
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</a>
+										</div>
+									</th>
+									<th>
+										Имя
+										<div class="sort_box">
+											<a href="#">
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</a>
+										</div>
+									</th>
+									<th>
+										Эл. почта
+										<div class="sort_box">
+											<a href="#">
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</a>
+										</div>
+									</th>
+									<th>
+										Телефон
+										<div class="sort_box">
+											<a href="#">
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</a>
+										</div>
+									</th>
+									<th>
+										DoB
+										<div class="sort_box">
+											<a href="#">
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</a>
+										</div>
+									</th>
+									<th>
+										Social_ID
+										<div class="sort_box">
+											<a href="#">
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</a>
+										</div>
+									</th>
+									<th>
+										Тип
+										<div class="sort_box">
+											<a href="#">
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</a>
+										</div>
+									</th>
+									<th>
+										Статус
+										<div class="sort_box">
+											<a href="#">
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</a>
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="status_active table_row">
+									<div class="mobile_buts">
+										<td class="mobile_status_cell status_active">
+											<span>Активный</span>
+										</td>
+										<td class="first_col">
+											<input id="box4" type="checkbox" class="with-font">
+											<label for="box4"></label>
+										</td>
+										<td class="edit_cell">
+											<button type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+										</td>
+										<td class="action_cell dropdown mobile_dropdown">
+											<button type="button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i></button>
+											<ul class="dropdown-menu">
+												<li><a>Копировать</a></li>
+												<li><a>Удалить</a></li>
+											</ul>
+										</td>
+									</div>
+									<td class="cell_id table_cell">
+										<table>
+											<td class="cell_title">ID</td>
+											<td>000001</td>
+										</table>
+									</td>
+									<td class="user_name table_cell">
+										<table>
+											<td class="cell_title">Имя</td>	
+											<td>Константинопольский Константин</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Эл. почта</td>	
+											<td class="cell_email">konstantinopolskiy@gmail.com</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Телефон</td>
+											<td>+38 (097) 756-45-44</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">DoB</td>
+											<td>12 feb 1987</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Social_ID</td>
+											<td><a href="#">Костян</a></td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Тип</td>
+											<td>Клиент</td>
+										</table>
+									</td>
+									<td class="status_cell"><div class="status_line"></div><span>Активный</span></td>
+								</tr>
+								<tr class="status_active table_row">
+									<div class="mobile_buts">
+										<td class="mobile_status_cell status_active">
+											<span>Активный</span>
+										</td>
+										<td class="first_col">
+											<input id="box6" type="checkbox" class="with-font">
+											<label for="box6"></label>
+										</td>
+										<td class="edit_cell">
+											<button type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+										</td>
+										<td class="action_cell dropdown mobile_dropdown">
+											<button type="button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i></button>
+											<ul class="dropdown-menu">
+												<li><a>Копировать</a></li>
+												<li><a>Удалить</a></li>
+											</ul>
+										</td>
+									</div>
+									<td class="cell_id table_cell">
+										<table>
+											<td class="cell_title">ID</td>
+											<td>000001</td>
+										</table>
+									</td>
+									<td class="user_name table_cell">
+										<table>
+											<td class="cell_title">Имя</td>	
+											<td>Константинопольский Константин</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Эл. почта</td>	
+											<td class="cell_email">konstantinopolskiy@gmail.com</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Телефон</td>
+											<td>+38 (097) 756-45-44</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">DoB</td>
+											<td>12 feb 1987</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Social_ID</td>
+											<td><a href="#">Костян</a></td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Тип</td>
+											<td>Клиент</td>
+										</table>
+									</td>
+									<td class="status_cell"><div class="status_line"></div><span>Активный</span></td>
+								</tr>
+								<tr class="table_row status_active">
+									<div class="mobile_buts">
+										<td class="mobile_status_cell">
+											<span>Активный</span>
+										</td>
+										<td class="first_col">
+											<input id="box1" type="checkbox" class="with-font">
+											<label for="box1"></label>
+										</td>
+										<td class="edit_cell">
+											<button type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+										</td>
+										<td class="action_cell dropdown mobile_dropdown">
+											<button type="button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i></button>
+											<ul class="dropdown-menu">
+												<li><a>Копировать</a></li>
+												<li><a>Удалить</a></li>
+											</ul>
+										</td>
+									</div>
+									<td class="cell_id table_cell">
+										<table>
+											<td class="cell_title">ID</td>
+											<td>000001</td>
+										</table>
+									</td>
+									<td class="user_name table_cell">
+										<table>
+											<td class="cell_title">Имя</td>	
+											<td>Константинопольский Константин</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Эл. почта</td>	
+											<td class="cell_email">konstantinopolskiy@gmail.com</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Телефон</td>
+											<td>+38 (097) 756-45-44</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">DoB</td>
+											<td>12 feb 1987</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Social_ID</td>
+											<td><a href="#">Костян</a></td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Тип</td>
+											<td>Клиент</td>
+										</table>
+									</td>
+									<td class="status_cell"><div class="status_line"></div><span>Активный</span></td>
+								</tr>
+								<tr class="table_row status_deactivated">
+									<div class="mobile_buts">
+										<td class="mobile_status_cell">
+											<span>Деактивирован</span>
+										</td>
+										<td class="first_col">
+											<input id="box2" type="checkbox" class="with-font">
+											<label for="box2"></label>
+										</td>
+										<td class="edit_cell">
+											<button type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+										</td>
+										<td class="action_cell dropdown mobile_dropdown">
+											<button type="button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i></button>
+											<ul class="dropdown-menu">
+												<li><a>Копировать</a></li>
+												<li><a>Удалить</a></li>
+											</ul>
+										</td>
+									</div>
+									<td class="cell_id table_cell">
+										<table>
+											<td class="cell_title">ID</td>
+											<td>000001</td>
+										</table>
+									</td>
+									<td class="user_name table_cell">
+										<table>
+											<td class="cell_title">Имя</td>	
+											<td>Константинопольский Константин</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Эл. почта</td>	
+											<td class="cell_email">konstantinopolskiy@gmail.com</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Телефон</td>
+											<td>+38 (097) 756-45-44</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">DoB</td>
+											<td>12 feb 1987</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Social_ID</td>
+											<td><a href="#">Костян</a></td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Тип</td>
+											<td>Клиент</td>
+										</table>
+									</td>
+									<td class="status_cell"><div class="status_line"></div><span>Деактивирован</span></td>
+								</tr>
+								<tr class="table_row status_holiday">
+									<div class="mobile_buts">
+										<td class="mobile_status_cell">
+											<span>В отпуске</span>
+										</td>
+										<td class="first_col">
+											<input id="box3" type="checkbox" class="with-font">
+											<label for="box3"></label>
+										</td>
+										<td class="edit_cell">
+											<button type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+										</td>
+										<td class="action_cell dropdown mobile_dropdown">
+											<button type="button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i></button>
+											<ul class="dropdown-menu">
+												<li><a>Копировать</a></li>
+												<li><a>Удалить</a></li>
+											</ul>
+										</td>
+									</div>
+									<td class="cell_id table_cell">
+										<table>
+											<td class="cell_title">ID</td>
+											<td>000001</td>
+										</table>
+									</td>
+									<td class="user_name table_cell">
+										<table>
+											<td class="cell_title">Имя</td>	
+											<td>Константинопольский Константин</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Эл. почта</td>	
+											<td class="cell_email">konstantinopolskiy@gmail.com</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Телефон</td>
+											<td>+38 (097) 756-45-44</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">DoB</td>
+											<td>12 feb 1987</td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Social_ID</td>
+											<td><a href="#">Костян</a></td>
+										</table>
+									</td>
+									<td class="table_cell">
+										<table>
+											<td class="cell_title">Тип</td>
+											<td>Клиент</td>
+										</table>
+									</td>
+									<td class="status_cell"><div class="status_line"></div><span>В отпуске</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!--/sidebar-menu-->
+			<div class="sidebar-menu">
+				<header class="logo1">
+					<span class="mobile_logo">ТКН-CRM</span>
+					<button type="button" class="sidebar-icon"><span class="fa fa-bars"></span></button>
+				</header>
+				<div class="menu">
+					<ul id="menu">
+						<li">
+							<form>
+								<div class="search_box">
+									<input type="text" class="menu_search form-control" placeholder="Поиск">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</div>
+							</form>
+						</li>
+						<li>
+							<a href="#" class="icon_link"><i class="fa fa-tachometer"></i></a>
+							&nbsp;<span>Статистика</span>
+						</li>
+						<li>
+							<a href="#" class="icon_link"><i class="fa fa-users" aria-hidden="true"></i></a>&nbsp;
+							<span class="submenu_toggle">Пользователи</span>
+							<i class="fa fa-angle-down pull-right submenu_icon"></i>
+						</li>
+						<ul class="submenu">
+							<li><a href="#">Субменю 1</a></li>
+							<li><a href="#">Субменю 2</a></li>
+							<li><a href="#">Субменю 3</a></li>
+						</ul>
+						<li>
+							<a href="#" class="icon_link"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+							&nbsp;<span>Заявки</span>
+						</li>
+						<li>
+							<a href="#" class="icon_link"><i class="fa fa-industry" aria-hidden="true"></i></a>
+							&nbsp;<span class="submenu_toggle">Объекты</span>
+							<i class="fa fa-angle-down pull-right submenu_icon"></i>
+						</li>
+						<ul class="submenu">
+							<li><a href="#">Объекты 1</a></li>
+							<li><a href="#">Объекты 2</a></li>
+							<li><a href="#">Объекты 3</a></li>
+						</ul>
+						<li>
+							<a href="#" class="icon_link"><i class="fa fa-cog" aria-hidden="true"></i></a>
+							&nbsp;<span>Настройки</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<footer class="footer">
+		
+		</footer>
+
+		<!-- Scripts Libraries-->
+		<script src="js/jquery-3.1.1/jquery-3.1.1.min.js"></script>
+		<script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+		<script src="js/bootstrap-3.3.7/js/bootstrap.js"></script>
+		<script src="js/bootstrap-select-1.12.2/bootstrap-select.js"></script>
+
+		<!-- Custom Scripts files -->
+		<script src="js/scripts.js" type="text/javascript"></script>
+		
+		<script>
+			$( document ).ready(function() {
+				// Sidebar Menu
+				var toggle = true;									
+				$(".sidebar-icon").on( "click", function() {
+					$(".sidebar-icon .fa").toggleClass("fa fa-times fa fa-bars");
+					if (toggle){
+						$(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+						$("#menu span").css({"position":"relative"});
+						$(".submenu_icon").removeClass("fa-angle-up").addClass("fa-angle-down");
+					}else{
+						$(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+						$(".submenu").slideUp();
+						$(".submenu_icon").removeClass("fa-angle-up").addClass("fa-angle-down");
+						setTimeout(function() {
+							$("#menu span").css({"position":"absolute"});
+						}, 400);
+					}				
+				toggle = !toggle;
+				});
+				
+				$(".submenu_toggle").on( "click", function() {
+					$(this).parent().next().slideToggle();
+					$(this).parent().find(".submenu_icon").toggleClass("fa-angle-up fa-angle-down");
+					
+				});
+				
+				// Advanced filters
+				$(".filters_button").on( "click", function() {
+					$(".advanced_filters").slideToggle("fast").toggleClass("overflow_hide");
+				});
+				
+				$(".advanced_filters .cloce_btn").on( "click", function() {
+					$(".advanced_filters").slideUp("fast");
+					$('body').removeClass('overflow_hide');
+				});
+				
+				$(".mob_filrer_btn").on( "click", function() {
+					$(".advanced_filters").slideDown("fast");
+					$('body').addClass('overflow_hide');
+				});
+				
+				// Datepicker
+				$(".has_datepicker").datepicker();
+			});	
+		</script>
+    </body>
+</html>

@@ -1,0 +1,432 @@
+a {
+	cursor: pointer;
+}
+
+.wblock {
+	background-color: white !important;
+	-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3) !important;
+	-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3) !important;
+	-o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3) !important;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3) !important;
+}
+
+.hide {
+	display: none;
+}
+
+.main_block {
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.block_h {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.inline-checkbox {
+	display: inline;
+	margin-right: 10px;
+}
+
+.row_a_div {
+	display: block;
+}
+.row_a_div {
+	color: #333;
+}
+
+.row_a_div:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+.btn {
+	white-space: normal;
+}
+/* ---------------------- TOP Header -------------------------------------------- TOP Header ---------------------- */
+.header {
+	height: 60px;
+	width: 100%;
+	background-color: #fff;
+	border-bottom: 1px solid #D2D6DF;
+}
+
+.container {
+	margin: auto;
+	max-width: 1080px;
+	position: relative;
+}
+
+.logo_holder {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 60px;
+	float: left;
+	width: 200px;
+	display: block;
+	color: #333;
+}
+.logo_holder:hover {
+	text-decoration: none;
+}
+.header_right {
+	font-size: 16px;
+	line-height: 60px;
+	width: 110px;
+	float: right;
+	cursor: pointer;
+	text-align:center;
+}
+.header_right:hover {
+	font-weight: bold;
+	background: #f4fff4;
+}
+
+/* ---------------------- Website CSS -------------------------------------------- Website CSS ---------------------- */
+
+.register_btn {
+	width: 200px;
+	font-size: 16px;
+	color: #333;
+	display: block;
+}
+.register_btn:hover {
+	text-decoration: none;
+	color: #444;
+}
+
+.menu_btn {color: #333;  display: block;}
+.menu_btn:hover {color: #444;  text-decoration: none;}
+
+.user_container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+body {
+	background: #f3f3f3;
+}
+
+div.dropup ul {
+	bottom:100% !important;
+	top:auto !important;
+}
+
+.logo_img {
+	height: 50px;
+}
+
+/* ---------------------- INDEX CSS -------------------------------------------- INDEX CSS ---------------------- */
+
+
+.why_img {
+	width: 100%;
+}
+h1 {
+	font-weight: normal;
+	font-size: 26px;
+}
+
+h2, h4, h3 {
+	font-weight: normal;
+}
+.index_btn_holder .btn {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 45px;
+	line-height: 30px;
+	font-size: 22px;
+}
+
+.index_img_h {
+	height: 180px;
+	overflow:hidden;
+
+}
+.top_mini_border {
+	border-top: 1px solid #eee;
+}
+
+@media(max-width:650px) {
+	.index_btn_holder .btn {
+		line-height: 27px;
+		font-size: 18px;
+		
+		overflow: hidden;
+	}
+	.main_block div.f16 {
+		margin-bottom: 15px;
+	}
+}
+
+/* ---------------------- INFO CSS -------------------------------------------- INFO CSS ---------------------- */
+
+.i_know:hover {
+	text-decoration: none;
+	color: #4abf7b !important;
+}
+
+.rel_block {
+	margin-top: 5px;
+}
+
+.rel_name_h {
+	background: #eee;
+	border-top: 1px solid #e3e3e3;
+}
+
+.comments_block_container .article_content {
+	max-width: 1024px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding: 20px;
+	overflow-x: hidden;
+	border-left: 2px solid #337ab7;
+	position: relative;
+	min-height: 300px;
+
+}
+.wbgs1 {
+	background-color: white !important;
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3) !important;
+	-moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3) !important;
+	-o-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3) !important;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+.green_bg {
+	background: #efe;
+}
+.rel_bloch h4 {
+	font-weight: normal;
+}
+.rel_items h4 {
+	font-weight: normal;
+}
+
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+	color: #fff !important;
+}
+.rel_child_block h4, .rel_block h4 {
+	margin-bottom:0;
+	margin-top:0;
+
+}
+
+.rel_child_block {
+	border-top: 1px solid #ddd;
+	padding: 10px 35px 10px 10px;
+	position:relative;
+}
+.rel_child_block h4 {
+	overflow: hidden;
+	height: 21px;
+}
+.rel_child_block .rel_child_desc {
+	overflow: hidden;
+	height: 20px;
+	color: #aaa;
+}
+
+.rel_child_block .h4_alone {
+	margin: 10px 0;
+}
+
+
+
+.rel_child_block:hover {
+	background: #efe;
+	cursor: pointer;
+}
+
+.rel_child_block .item_name:hover {
+	text-decoration: none;
+}
+
+.rel_child_block .glyphicon.glyphicon-chevron-right{
+	position:absolute;
+	right:20px;
+	top:50%;
+	margin-top:-7px;
+	color: #ddd;
+	font-size: 15px;
+}
+.rel_child_block:hover .glyphicon.glyphicon-chevron-right {
+	color: #777;
+}
+
+.rel_desc p {
+	font-size:10px;
+}
+.rel_a_text {
+	/* font-size: 16px; */
+}
+
+.adv_ui_topright {
+	position: absolute;
+	top: 25px;
+	right: 20px;
+}
+.info_right_ui {
+	padding-right: 150px;
+}
+
+@media(max-width:1000px) {
+	.adv_ui_topright {
+		position: static;
+	}
+	.info_right_ui {
+		padding-right: 0;
+	}
+
+	.rel_child_block h4 {
+		overflow: visible;
+		height: auto;
+	}
+	.rel_child_block .rel_child_desc {
+		overflow: visible;
+		height: auto;
+
+	}
+
+
+}
+
+/* ---------------------- PROFILE CSS -------------------------------------------- PROFILE CSS ---------------------- */
+
+#user_info input[type=text] {
+	width: 100%;
+}
+
+#user_pass input[type=text] {
+	width: 100%;
+}
+.profile_info_blocks {
+	font-size: 18px;
+}
+/* ---------------------- Footer -------------------------------------------- Footer ---------------------- */
+
+body {
+	margin-bottom: 30px;
+}
+
+.footer {
+	background-color: #333;
+	bottom:0;
+	position: fixed;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	color: white;
+}
+
+.footer a {
+	color: white;
+}
+
+/* ---------------------- For Mobile -------------------------------------------- Mobile ---------------------- */
+
+@media(max-width:650px) {
+	.menu_text {display: none;}
+	.header_right {width: 40px;}
+}
+
+
+/* ---------------------- Login register page -------------------------------------------- ----------------------*/
+
+.log_reg_container{
+	width:100%;
+	max-width:320px;
+	margin:0 auto;
+	margin-top:100px;
+}
+.log_reg_container .heading_buttons{
+	margin-bottom:20px;
+}
+.log_reg_container .form-group label{
+	font-size: 15px;
+	font-weight: bold;
+}
+.log_reg_container .form-group input{
+	height: 52px;
+	border: 1px solid rgba(216, 216, 216, 1);
+	border-radius: 2px;
+}
+.log_reg_container .heading_buttons:after{
+	content:"";
+	clear:both;
+	display:table;
+}
+
+.log_reg_container .heading_buttons .lr_btn{
+	border:none;
+	background:none;
+	font-size: 17px;
+	padding:0;
+	border-bottom:1px solid;
+	border-bottom-style:dashed;
+}
+
+.log_reg_container .heading_buttons .lr_btn.active{
+	font-weight: bold;
+	border-color:transparent;
+	color:#4cae4c;
+}
+.log_reg_container .heading_buttons .left_btn{
+	float:left;
+}
+.log_reg_container .heading_buttons .right_btn{
+	float:right;
+	text-align:right;
+}
+.log_reg_container .forgot_group{
+	text-align:right;
+}
+.log_reg_container .forgot_group .forgot_pass{
+	cursor:pointer;
+}
+.log_reg_container .bottom_btn{
+	width:100%;
+	height:52px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.log_reg_container .register_block, .log_reg_container .restore_block{
+	display:none;
+}
+.log_reg_container .soc_group .btn{
+	width:100%;
+	height: 40px;
+	border-radius: 2px;
+	line-height: 28px;
+	font-size:16px;
+}
+.log_reg_container .soc_group .btn .fa{
+	margin-right:5px;
+}
+.log_reg_container .soc_group .btn.btn-danger{
+	background-color:#e15541;
+}
+.log_reg_container .soc_group .btn.btn-danger:hover{
+	border-color:transparent;
+}
+.log_reg_container .soc_group .btn.btn-primary{
+	background-color:#3d65a5;
+}
+.log_reg_container .soc_group .btn.btn-primary:hover{
+	border-color:transparent;
+}
+.log_reg_container .alert_msg{
+	color: #a94442;
+}
+.restore_block .restore_title{
+	text-align:center;
+}
+.restore_block .restore_title label{
+	font-size:20px;
+	margin-bottom:10px;
+}

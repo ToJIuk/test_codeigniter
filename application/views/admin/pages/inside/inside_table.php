@@ -209,7 +209,10 @@ if (isset($table_config['avg_function'])) {
                 <span></span>
             </td>
             <td>
-                <input type="button" value="Go">
+                <form method="get" action="">
+                    <input type="hidden" name="id" value=<?=$table_row['id']?> >
+                    <input type="submit" value="Сгенерировать">
+                </form>
             </td>
         </tr>
 
@@ -292,6 +295,7 @@ if (isset($table_config['avg_function'])) {
     <br/>
     <?php echo $debug; ?>
 </div>
+
 
 <!-- =======================    STATUS   =================== -->
 <?php if (isset($table_config['status_rel_name'])) { ?>

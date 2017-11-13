@@ -27,6 +27,32 @@ class Inside_Model extends CI_Model
 
 
     }
+    // generate word document
+    public function generate_docx($id)
+    {
+        require 'vendor/autoload.php';
+
+        $query = $this->db->get_where('it_mytest', array('id' => $id));
+        $data = $query->row_array();
+
+        // работа с php Word
+        $PHPWord = new \PhpOffice\PhpWord\PhpWord();
+        $document = new \PhpOffice\PhpWord\TemplateProcessor('files/arr_docs_templates/template.docx');
+        $document->setValue(['doc_number', 'company_name', 'client_name'], [$data['doc_number'], $data['company_name'], $data['client_name']]);
+        $document->saveAs('files/arr_docs_generated/'.$data['id'].'_doc_gen.docx');
+        header("Content-Description: File Transfer");
+        header('Content-Disposition: attachment; filename="' .$data['id'].'_doc_gen.docx' . '"');
+        header('Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+        header('Content-Transfer-Encoding: binary');
+        header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+        header('Expires: 0');
+        /*    $xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter('files/arr_docs_generated/'.$data['id'].'_doc_gen.docx', 'Word2007');
+            $xmlWriter->save("php://output");*/
+        $PHPWord = \PhpOffice\PhpWord\IOFactory::load('files/arr_docs_generated/'.$data['id'].'_doc_gen.docx'); // Read the temp file
+        $xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter($PHPWord);
+        $xmlWriter->save("php://output");
+
+    }
 
 	// NEW For Tabs and Columns Filters
 	public function generate_top_filters2 ($table_name)

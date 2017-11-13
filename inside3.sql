@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 12 2017 г., 14:29
+-- Время создания: Ноя 13 2017 г., 15:33
 -- Версия сервера: 10.1.21-MariaDB
 -- Версия PHP: 5.6.30
 
@@ -267,7 +267,13 @@ INSERT INTO `inside_log` (`log_id`, `log_datetime`, `log_sql`, `log_table`, `log
 (30, 1494023031, 'UPDATE `inside_top_menu` SET `top_menu_parent_id` = \'\', `top_menu_haschild` = \'1\', `top_menu_name` = \'Languages\', `top_menu_url` = \'\', `top_menu_icon` = \'fa fa-book\', `top_menu_icon_url` = \'/inside/table/wm_vocabulary\', `top_menu_module_name` = \'\', `top_menu_invisible` = \'1\', `top_menu_priority` = \'4\' WHERE `top_menu_id` =  \'79\'', 'inside_top_menu', 1),
 (31, 1510484091, 'INSERT INTO `it_menu` (`menu_id`, `menu_pid`, `menu_haschild`, `menu_name`, `menu_url`, `menu_invisible`, `menu_priority`) VALUES (NULL, \'0\', \'\', \'test\', \'\', \'\', \'\')', 'it_menu', 28),
 (32, 1510484152, 'DELETE FROM `it_menu`\nWHERE `menu_id` =  1', 'it_menu', 28),
-(33, 1510488742, 'INSERT INTO `it_mytest` (`id`, `doc_number`, `company_name`, `client_name`) VALUES (NULL, \'36\', \'some_company 5\', \'client 6\')', 'it_mytest', 28);
+(33, 1510488742, 'INSERT INTO `it_mytest` (`id`, `doc_number`, `company_name`, `client_name`) VALUES (NULL, \'36\', \'some_company 5\', \'client 6\')', 'it_mytest', 28),
+(34, 1510567874, 'DELETE FROM `it_mytest`\nWHERE `id` =  7', 'it_mytest', 28),
+(35, 1510567874, 'DELETE FROM `it_mytest`\nWHERE `id` =  6', 'it_mytest', 28),
+(36, 1510567874, 'DELETE FROM `it_mytest`\nWHERE `id` =  5', 'it_mytest', 28),
+(37, 1510567874, 'DELETE FROM `it_mytest`\nWHERE `id` =  4', 'it_mytest', 28),
+(38, 1510567874, 'DELETE FROM `it_mytest`\nWHERE `id` =  1', 'it_mytest', 28),
+(39, 1510567909, 'INSERT INTO `it_mytest` (`id`, `doc_number`, `company_name`, `client_name`) VALUES (NULL, \'1234\', \'some company\', \'Tolik\')', 'it_mytest', 28);
 
 -- --------------------------------------------------------
 
@@ -618,11 +624,7 @@ CREATE TABLE `it_mytest` (
 --
 
 INSERT INTO `it_mytest` (`id`, `doc_number`, `company_name`, `client_name`) VALUES
-(1, 234, 'some company 1', 'some client 1'),
-(4, 257, 'some company 2', 'some client 2'),
-(5, 534, 'some company 3', 'some client 3'),
-(6, 198, 'some company 4', 'some client 4'),
-(7, 36, 'some_company 5', 'client 6');
+(8, 1234, 'some company', 'Tolik');
 
 -- --------------------------------------------------------
 
@@ -1307,7 +1309,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT для таблицы `inside_log`
 --
 ALTER TABLE `inside_log`
-  MODIFY `log_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `log_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 --
 -- AUTO_INCREMENT для таблицы `inside_row_chat`
 --
@@ -1377,7 +1379,7 @@ ALTER TABLE `it_menu`
 -- AUTO_INCREMENT для таблицы `it_mytest`
 --
 ALTER TABLE `it_mytest`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT для таблицы `it_orders`
 --

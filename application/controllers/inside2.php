@@ -20,6 +20,11 @@ class Inside2 extends Controller_Admin
 
     public function table($table_name = 'inside_top_menu')
     {
+        if (!empty($_GET)){
+            $this->load->model('inside_model');
+            $this->inside_model->generate_docx($_GET['id']);
+        }
+
         // Access Check
         $this->inside_lib->check_access('inside2_' . $table_name, 'init');
 
